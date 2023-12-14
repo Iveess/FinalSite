@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модний текстиль</title>
+    <link rel="icon" type="image/x-icon" href="26e75a75bb08b88c67776a1d904d1a9c.ico">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://i.imgur.com/mmeW1jf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #c6b3ff; /* Фоновий колір на випадок, якщо зображення не завантажиться */
+}
+
+
+        header {
+            background-color: #000; /* фоновий колір заголовку */
+            color: #fff;
+            text-align: center;
+            padding: 0.2em;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background: rgb(8,0,29);
+            background: linear-gradient(90deg, rgba(8,0,29,1) 0%, rgba(255,0,206,1) 30%, rgba(128,0,35,1) 56%, rgba(255,255,255,1) 75%, rgba(129,0,91,1) 88%);
+            padding: 0.5em;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+            height: 100%; /* Зробити висоту навігаційного блоку такою самою, як і у зображення */
+        }
+
+        nav img {
+            margin-right: 10px; /* Додатковий відступ між зображенням і текстом */
+            height: 100%; /* Зробити висоту зображення такою самою, як і у навігаційному блоку */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
+        }
+
+        nav a:hover {
+            background-color: #8d7ab9; /* фоновий колір навігації при наведенні */
+        }
+
+        .main-image {
+            position: relative;
+            border-bottom: 3px solid #13004d; /* Add bottom border to the image */
+        }
+
+        .main-image img {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+            margin: 0;
+            display: block;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(19, 0, 77, 0.5); /* semi-transparent background color */
+            padding: 20px;
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            border-bottom: 3px solid #13004d; /* Change border color to #13004d */
+        }
+
+        .text-overlay h2,
+        .text-overlay p{
+            font-size: 60px;
+        }
+
+        /* Додайте новий клас для стилізації блоків у секціях */
+        .section-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Add this line */
+}
+
+
+.section-text {
+    flex: 1;
+    width: 100%; /* Add this line */
+}
+
+.section-image {
+    flex: 1;
+    width: 100%; /* Add this line */
+}
+
+
+/* Стилізація для картинки в правому блоку */
+.section-image img {
+    width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    border: 2px solid black; /* Додаємо бордер навколо зображення */
+    border-radius: 10px;
+
+}
+
+#section1 p {
+    font-size: 36px; /* Наприклад, 18px - встановіть бажаний розмір */
+}
+
+#section2 p {
+    font-size: 36px; /* Наприклад, 18px - встановіть бажаний розмір */
+}
+
+#section2 .section-text {
+    text-align: right;
+}
+
+        footer {
+            background-color: #70609f;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position:relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+.div1 {
+    padding: 15px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;    
+}
+
+#contacts {
+    display: flex;
+    justify-content: space-around; /* Рівномірно розподілити елементи по ширині */
+    align-items: center; /* Вирівняти елементи по центру вертикально */
+    background: rgb(8,0,29);
+background: linear-gradient(90deg, rgba(8,0,29,1) 0%, rgba(235,82,158,1) 14%, rgba(128,0,35,1) 28%, rgba(255,255,255,1) 43%, rgba(255,0,206,1) 53%, rgba(129,0,91,1) 67%, rgba(129,14,51,1) 79%, rgba(129,26,99,1) 89%, rgba(0,0,0,1) 100%);
+    padding: 20px; /* Додати відступ */
+  }
+
+  #contacts h2,
+#contacts p {
+  color: white; /* Білий колір тексту */
+  font-size: 1.4em; /* Збільшення розміру тексту (можна змінити за потребою) */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000; /* Чорна обводка */
+}
+
+  .section-text h2,
+.section-text p {
+  display: inline-block; /* Робимо блоком, щоб ширина підлаштовувалась до контенту */
+  background-color: rgba(255, 255, 255, 0.25); /* Білий колір з 75% прозорістю */
+  padding: 10px; /* Відступи навколо тексту */
+  margin: 5px 0; /* Можете змінити відступи, якщо потрібно */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.div2 {
+    flex: 1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    height: 500px;
+}
+
+.red-block {
+    background: rgb(8, 0, 29);
+    background: linear-gradient(90deg, rgba(8, 0, 29, 1) 0%, rgba(128, 0, 35, 1) 21%, rgba(201, 0, 255, 1) 31%, rgba(255, 0, 206, 1) 44%, rgba(129, 0, 91, 1) 53%, rgba(255, 255, 255, 1) 64%, rgba(129, 14, 51, 1) 75%, rgba(129, 26, 99, 1) 88%, rgba(0, 0, 0, 1) 100%);
+}
+
+.blue-block {
+    background: rgb(8, 0, 29);
+    background: linear-gradient(90deg, rgba(8, 0, 29, 1) 0%, rgba(129, 26, 99, 1) 10%, rgba(129, 14, 51, 1) 26%, rgba(129, 0, 91, 1) 39%, rgba(255, 255, 255, 1) 50%, rgba(201, 0, 255, 1) 58%, rgba(255, 0, 206, 1) 72%, rgba(128, 0, 35, 1) 88%, rgba(0, 0, 0, 1) 100%);
+}
+
+#music-control {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            float: right; /* Розмістіть кнопку з правого боку */
+        }
+
+        #music-control:hover {
+            background-color: #8d7ab9; /* фоновий колір кнопки при наведенні */
+        }
+
+    </style>
+</head>
+<body>
+    <audio id="background-music" autoplay loop volume="0.3">
+        <source src="once-in-paris-168895.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <header>
+        
+    </header>
+
+    <nav>
+        <img src="https://i.imgur.com/VsATn9W.png">
+        <a onclick="scrollToSection('home')">Головна</a>
+        <a onclick="scrollToSection('section1')">Про нас</a>
+        <a onclick="scrollToSection('section2')">Переваги</a>
+        <a onclick="scrollToSection('section3')">Інформація</a>
+        <a onclick="scrollToSection('contacts')">Контакти</a>
+        <a href="#" onclick="loadIndex2()">Список товарів</a>
+        <a href="#" onclick="loadIndex3()">Детально</a>
+        <a id="music-control" onclick="toggleMusic()">Увімкнути музику</a>
+    </nav>
+
+    <div class="main-image" id="home">
+        <img src="https://cdn.thomasnet.com/insights-images/embedded-images/af9ef027-e3f9-4d33-9f3d-61b70d507af5/0bb97e4d-75b9-484d-b638-7728e891cac2/FullHD/shutterstock_182465732-min.jpg" alt="Ваш опис картинки">
+        <div class="text-overlay">
+            <h2>Модний Текстиль</h2>
+            <p>Продаж якісних тканин по всій Україні.</p>
+        </div>
+    </div>
+
+    <section id="section1" class="section-container">
+        <div class="section-text">
+            <h2>Про нас</h2>
+            <p>
+                Ласкаво просимо в "Модний Текстиль" – ваш перший вибір у світі якісних та стильних тканин! 
+                Наш магазин пропонує великий асортимент тканин для будь-яких творчих ідей та модних проектів. 
+                Ми прагнемо задовольнити ваші потреби в елегантних матеріалах, надаючи найвищу якість і розмаїття вибору. 
+                З "Модним Текстилем" кожен ваш шов або дизайн отримає особливий шарм і стане вираженням вашого стилю. 
+                Дозвольте нам допомогти вам зробити ваші творчі задуми реальністю!
+            </p>
+        </div>
+        <div class="div1">
+            <div class="section-image">
+                <img src="https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/35c5aeb3-f292-4582-bf5e-8b29182eb74e.jpeg" alt="Ваш опис картинки">
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="section-container">
+        <div class="div1">
+            <div class="section-image">
+                <img src="https://blog.patra.com/wp-content/uploads/2014/07/Fabric_Rainbow_Colors-300x249.jpg" alt="Ваш опис картинки">
+            </div>
+        </div>
+        <div class="section-text">
+            <h2>Наші переваги</h2>
+            <p>"Магазин тканин 'Модний Текстиль' пропонує неперевершені можливості для вашої творчості та стилю. 
+                Наші переваги – великий асортимент високоякісних тканин для будь-яких модних проектів, найсучасніші тренди у світі текстилю, та особистий підхід до кожного клієнта. 
+                З нами кожен шов отримає неповторний шарм, а ваші ідеї стануть реальністю. Обирайте 'Модний Текстиль' – обирайте якість та стиль!"</p>
+        </div>
+    </section>
+
+    <section id="section3" class="section-container">
+        <div class="div2 red-block">
+            <!-- Google Map Embed Code -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2745548.8791766425!2d23.500070442979545!3d48.37943397968728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473f0a2f7ccadbcf%3A0xc7578c99781e7b56!2sUkraine!5e0!3m2!1sen!2sus!4v1643846469388!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="div2 blue-block">
+            <!-- YouTube Video Embed Code -->
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FPc4Xr93z5o?si=1ngW8PHQfswBLDE2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    
+
+    <section id="contacts" class="section-container">
+        <h2>Наші Контакти</h2>
+        <p>Номер телефону: +380(33)333-33-33</p>
+        <p>Наш телеграм: @ExampleTelegram</p>
+        <p>Наш інстаграм: @ExampleInstagram</p>
+    </section>
+    
+    
+
+    <footer>
+        <p>&copy; Цей сайт розроблено не для комерційної діяльності</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            console.log(section);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMusic() {
+            var audio = document.getElementById('background-music');
+
+            // Перевіряємо, чи аудіо увімкнене
+            if (audio.paused) {
+                // Увімкнути аудіо
+                audio.play();
+                document.getElementById('music-control').innerText = 'Вимкнути музику';
+            } else {
+                // Вимкнути аудіо
+                audio.pause();
+                document.getElementById('music-control').innerText = 'Увімкнути музику';
+            }
+        }
+
+        function loadIndex2() {
+    window.location.href = 'index2.html';
+  }
+        function loadIndex3() {
+    window.location.href = 'index3.html';
+  }
+    </script>
+
+</body>
+</html>
